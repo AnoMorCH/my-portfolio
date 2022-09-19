@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    Hello, world! 
-</body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">AnoMorCH <br> portfolio</div>
+
+      <ul class="burger-menu">
+        <li>Me</li>
+        <li>Projects</li>
+        <li>Skills</li>
+        <li>Recognition</li>
+        <img class="close-button" src="{{ url_for('static', filename='images/close-button.png') }}" alt="Close button">
+      </ul>
+
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+
+    <script src="{{ url_for('static', filename='burger.js') }}"></script>
+  </body>
 </html>
