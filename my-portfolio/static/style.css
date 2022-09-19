@@ -1,0 +1,149 @@
+/* ! Adaptive markup is made until 375px. */
+
+/* 1. General */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 2. Header */
+header {
+  font-weight: bolder;
+  font-size: 1.5em; 
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+header > div.logo {
+  min-width: 10vw;
+  text-align: center;
+}
+
+header > ul {
+  width: 50%;
+  display: flex;
+}
+
+header > * {
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+header > ul.burger-menu > li {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em 2em;
+  border-radius: 2em;
+  transition: all 0.3s ease 0s;
+}
+
+header > ul.burger-menu > li:hover {
+  background-color: rgba(255,87,87,255);
+  cursor: pointer;
+}
+
+header > ul.burger-menu > li:active {
+  padding: 0.5em 1.5em;
+}
+
+header > div.burger {
+  right: 0;
+  position: absolute;
+  margin-right: 5vw;
+  cursor: pointer;
+}
+
+header > div.burger > div {
+  display: none; 
+  width: 25px;
+  height: 5px;
+  background-color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+header > ul.burger-menu > img.close-button {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  right: 5vw;
+  top: 5vw;
+  color: white;
+}
+
+@media (max-height: 600px) {
+  header {
+    min-height: 15vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  header > ul {
+    width: 65%;
+  }
+
+  header > div.burger {
+    margin-right: 10vw;
+  }
+}
+
+@media (max-width: 768px) {
+  /* header > ul.burger-menu > li:active {
+    padding: 0.5em 2em;
+  } */
+
+  header > ul.burger-menu > li {
+    position: relative;
+    padding: 0.8em;
+  }
+
+  header > ul.burger-menu > li::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 0.2em;
+    width: 0;
+    left: 0;
+    bottom: 1px;
+    transition: 0.3s;
+  }
+
+  header > ul.burger-menu > li:hover::after {
+    width: 100%;
+  }
+
+  header > div.burger {
+    position: static;
+  }
+
+  header > div.burger > div {
+    display: block;
+  }
+
+  header > ul {
+    top: -100%;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    justify-content: center;
+    background: rgba(255,87,87,255);
+    transition: top 1s ease 0s;
+    flex-direction: column;
+  }
+
+  header > ul > li {
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    color: white;
+  }
+
+  header > .logo {
+    width: 100%;
+  }
+}
