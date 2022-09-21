@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}"
+    />
+    <script
+      src="https://kit.fontawesome.com/d41b91cba2.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-      <div class="logo">AnoMorCH <br> portfolio</div>
+      <div class="logo">
+        AnoMorCH <br />
+        portfolio
+      </div>
 
       <ul class="burger-menu">
-        <li>Me</li>
-        <li>Projects</li>
-        <li>Skills</li>
-        <li>Recognition</li>
-        <img class="close-button" src="{{ url_for('static', filename='images/close-button.png') }}" alt="Close button">
+        <li name="me">Me</li>
+        <li name="projects">Projects</li>
+        <li name="skills">Skills</li>
+        <li name="recognition">Recognition</li>
+        <img
+          class="close-button"
+          src="{{ url_for('static', filename='images/close-button.png') }}"
+          alt="Close button"
+        />
       </ul>
 
       <div class="burger">
@@ -29,6 +46,43 @@
       </div>
     </header>
 
-    <script src="{{ url_for('static', filename='burger.js') }}"></script>
+    <main>
+      <section class="about-me">
+        <img
+          src="{{ url_for('static', filename='images/avatar.jpg') }}"
+          alt="My Photo"
+        />
+        <div class="description">
+          <p class="name">Anton Morozov</p>
+          <p class="info">
+            Beginner passionate Russian full stack developer who can help you
+            realize the project which will show the World your values.
+          </p>
+          <p class="info">
+            My target is to deliver to society your idea which 
+            will promote your
+            business and make your work recognizable.
+          </p>
+          <div class="contacts">
+            <a href="https://t.me/anomorch" target="_blank">
+              <i class="fa fa-brands fa-telegram"></i>
+            </a>
+            <a href="https://github.com/AnoMorCH" target="_blank">
+              <i class="fa fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:morozovantonaleksandrovich@gmail.com" target="_blank">
+              <i class="fa fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script 
+      src="{{ url_for('static', filename='scripts/burger.js') }}"
+    ></script>
+    <script
+      src="{{ url_for('static', filename='scripts/navigation.js') }}"
+    ></script>
   </body>
 </html>

@@ -22,7 +22,7 @@ header > div.logo {
   text-align: center;
 }
 
-header > ul {
+header > ul.burger-menu {
   width: 50%;
   display: flex;
 }
@@ -77,32 +77,31 @@ header > ul.burger-menu > img.close-button {
   color: white;
 }
 
-@media (max-height: 600px) {
-  header {
-    min-height: 15vh;
+@media (max-height: 400px) {
+  header > ul.burger-menu {
+    font-size: 1rem;
+    overflow-y: scroll;
   }
 }
 
-@media (max-width: 1024px) {
-  header > ul {
-    width: 65%;
+@media (max-width: 1440px) {
+  header {
+    justify-content: end;
+  }
+
+  header > div.logo {
+    display: none;
   }
 
   header > div.burger {
-    margin-right: 10vw;
+    position: static;
   }
-}
-
-@media (max-width: 768px) {
-  /* header > ul.burger-menu > li:active {
-    padding: 0.5em 2em;
-  } */
 
   header > ul.burger-menu > li {
     position: relative;
     padding: 0.8em;
   }
-
+  
   header > ul.burger-menu > li::after {
     content: "";
     position: absolute;
@@ -113,20 +112,16 @@ header > ul.burger-menu > img.close-button {
     bottom: 1px;
     transition: 0.3s;
   }
-
+  
   header > ul.burger-menu > li:hover::after {
     width: 100%;
   }
-
-  header > div.burger {
-    position: static;
-  }
-
+  
   header > div.burger > div {
     display: block;
   }
 
-  header > ul {
+  header > ul.burger-menu {
     top: -100%;
     height: 100vh;
     width: 100vw;
@@ -136,14 +131,147 @@ header > ul.burger-menu > img.close-button {
     transition: top 1s ease 0s;
     flex-direction: column;
   }
-
+  
   header > ul > li {
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
     color: white;
   }
+}
 
-  header > .logo {
-    width: 100%;
+@media (max-height: 600px) {
+  header {
+    min-height: 15vh;
+  }
+}
+
+/* 3. Main */
+main > section.about-me {
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+}
+
+main > section.about-me > * {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+main > section.about-me > img {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+}
+
+main > section.about-me > div.description {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 3vw;
+}
+
+main > section.about-me > div.description > p.name {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+main > section.about-me > div.description > p.info {
+  font-size: 1.5rem;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+main > section.about-me > div.description > div.contacts > a {
+  text-decoration: none;
+  color: black;
+}
+
+main > section.about-me > div.description > div.contacts > a > i {
+  font-size: 3.5rem;
+  margin-top: 1rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+main > section.about-me > div.description > div.contacts > a > i:hover {
+  color: rgba(255,87,87,255);
+  cursor: pointer;
+}
+
+main > section.about-me > div.description > div.contacts > a > i:active {
+  padding: 0.125em;
+}
+
+@media (max-width: 1440px) {
+  main > section.about-me {
+    width: 75vw;
+  }
+
+  main > section.about-me > div.description > p.name {
+    font-size: 2.5rem;
+  }
+
+  main > section.about-me > div.description > p.info {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1220px) {
+  main > section.about-me {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  main > section.about-me {
+    flex-direction: column;
+  }
+  
+  main > section.about-me > img {
+    width: 40vw;
+    height: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main > section.about-me > div.description > * {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  main > section.about-me {
+    width: 85vw;
+  }
+
+  main > section.about-me > img {
+    width: 50vw;
+    height: 50vw;
+  }
+  
+  main > section.about-me > div.description > p.name {
+    margin-top: 4vw;
+  }
+
+  main > section.about-me > div.description > p.info {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+}
+
+@media (max-width: 425px) {
+  main > section.about-me {
+    width: 90vw;
+  }
+
+  main > section.about-me > img {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  main > section.about-me > div.description > p.name {
+    font-size: 2.5em;
   }
 }
