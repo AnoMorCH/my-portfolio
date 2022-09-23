@@ -8,6 +8,35 @@
   font-family: 'Poppins', sans-serif;
 }
 
+main > section {
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+@media (max-width: 550px) or (max-height: 700px) {
+  main > section {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+}
+
+@media (max-height: 400px) {
+  main > section {
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+  }
+}
+
+@media (max-height: 200px) {
+  main > section {
+    margin-top: 9vh;
+    margin-bottom: 9vh;
+  }
+}
+
 /* 2. Header */
 header {
   font-weight: bolder;
@@ -48,7 +77,7 @@ header > ul.burger-menu > li:hover {
 }
 
 header > ul.burger-menu > li:active {
-  padding: 0.5em 1.5em;
+  transform: scale(0.8);
 }
 
 header > div.burger {
@@ -145,13 +174,8 @@ header > ul.burger-menu > img.close-button {
   }
 }
 
-/* 3. Main */
+/* 3. About Me */
 main > section.about-me {
-  width: 70vw;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
   display: flex;
 }
 
@@ -172,12 +196,12 @@ main > section.about-me > div.description {
   margin-left: 3vw;
 }
 
-main > section.about-me > div.description > p.name {
+main > section.about-me > div.description > h1 {
   font-size: 3rem;
   font-weight: bold;
 }
 
-main > section.about-me > div.description > p.info {
+main > section.about-me > div.description > p {
   font-size: 1.5rem;
   margin-top: 1vw;
   margin-bottom: 1vw;
@@ -201,7 +225,8 @@ main > section.about-me > div.description > div.contacts > a > i:hover {
 }
 
 main > section.about-me > div.description > div.contacts > a > i:active {
-  padding: 0.125em;
+  transition: all 0.3s ease 0s;
+  transform: scale(0.8);
 }
 
 @media (max-width: 1440px) {
@@ -209,11 +234,11 @@ main > section.about-me > div.description > div.contacts > a > i:active {
     width: 75vw;
   }
 
-  main > section.about-me > div.description > p.name {
+  main > section.about-me > div.description > h1 {
     font-size: 2.5rem;
   }
 
-  main > section.about-me > div.description > p.info {
+  main > section.about-me > div.description > p {
     font-size: 1.25rem;
   }
 }
@@ -251,11 +276,11 @@ main > section.about-me > div.description > div.contacts > a > i:active {
     height: 50vw;
   }
   
-  main > section.about-me > div.description > p.name {
+  main > section.about-me > div.description > h1 {
     margin-top: 4vw;
   }
 
-  main > section.about-me > div.description > p.info {
+  main > section.about-me > div.description > p {
     margin-top: 2vw;
     margin-bottom: 2vw;
   }
@@ -271,7 +296,292 @@ main > section.about-me > div.description > div.contacts > a > i:active {
     height: 80vw;
   }
 
-  main > section.about-me > div.description > p.name {
+  main > section.about-me > div.description > h1 {
     font-size: 2.5em;
+  }
+}
+
+/* 4. Projects */
+/* 4.1. The visible part */
+main > section.projects > h1 {
+  min-height: 10vh;
+  text-align: center;
+  line-height: 10vh;
+  font-size: 3rem;
+}
+
+main > section.projects > h2 {
+  font-weight: 100;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+main > section.projects > h2.ps-note {
+  margin-bottom: 0;
+  margin-top: 3rem;
+}
+
+main > section.projects > div.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+main > section.projects > div.list > a {
+  text-decoration: none;
+  color: black;
+}
+
+main > section.projects > div.list > a > div {
+  max-width: 25rem;
+  border-radius: 2rem;
+}
+
+main > section.projects > div.list > a > div:hover {
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  transform: scale(1.05);
+  filter: brightness(50%);
+}
+
+main > section.projects > div.list > a > div > div.image {
+  height: 15rem;
+  border-top: 0.15rem solid black;
+  border-left: 0.15rem solid black;
+  border-right: 0.15rem solid black;
+  border-radius: 2rem 2rem 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main > section.projects > div.list > a > div > div.description {
+  height: 15rem;
+  border: 0.15rem solid black;
+  border-radius: 0 0 2rem 2rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+main > section.projects > div.list > a > div > div.simetra {
+  background-image: url('images/simetra-1.png');
+}
+
+main > section.projects > div.list > a > div > div.poll {
+  background-image: url('images/poll-project.png')
+}
+
+main > section.projects > div.list > a > div > div.description > div.header {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+main > section.projects > div.list > a > div > div.description > p {
+  font-size: 1.35rem;
+}
+
+@media (max-width: 1200px) {
+  main > section.projects > h1 {
+    font-size: 2.5rem;
+  }
+
+  main > section.projects > h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  main > section.projects > h2.ps-note {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  main > section.projects > div.list > a > div {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  main > section.projects {
+    width: 85vw;
+  }
+
+  main > section.projects > h1 {
+    min-height: 10vh;
+  }
+
+  main > section.projects > div.list > a > div > div.description {
+    height: 17.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  main > section.projects > div.list > a > div > div.description {
+    height: 22.5rem;
+  }
+}
+
+@media (max-height: 700px) {
+  main > section.projects > h1 {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* 4.2. The popup part */
+main > div.popup {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+
+  background-color: #FFF;
+  overflow-y: scroll;
+}
+
+main > div.popup:target {
+  opacity: 1;
+  pointer-events: all;
+}
+
+main > div.popup > div.content {
+  margin-top: 2rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+
+main > div.popup > div.content > a > img {
+  position: absolute;
+  right: 5rem;
+  width: 3rem;
+  cursor: pointer;
+}
+
+main > div.popup > div.content > h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+main > div.popup > div.content > div.description {
+  margin-bottom: 1rem;
+}
+
+main > div.popup > div.content > div.description > p {
+  font-size: 1.5rem;
+  text-indent: 3rem;
+}
+
+main > div.popup > div.content > div.footer > p {
+  font-size: 1rem;
+  text-indent: 1.5rem;
+}
+
+main > div.popup > div.content > div.footer > p > span {
+  font-weight: bold;
+  color: rgba(255,87,87,255);
+}
+
+main > div.popup > div.content > div.container {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+main > div.popup > div.content > a > button {
+  background-color: rgba(255,87,87,255);
+  color: white;
+  font-weight: 1000;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 3rem;
+}
+
+main > div.popup > div.content > a > button:active {
+  transform: scale(0.8);
+}
+
+main > div.popup > div.content > div.container > img {
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: background 0.3s ease;
+}
+
+main > div.popup > div.content > div.container > div.images-list {
+  display: flex;
+  overflow-x: scroll;
+}
+
+main > div.popup > div.content > div.container > div.images-list > img {
+  width: 15vw;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+main > div.popup > div.content > div.container > div.images-list > img.current {
+  border: rgba(255,87,87,255) solid 0.2rem;
+}
+
+@media (max-width: 1440px) {
+  main > div.popup > div.content {
+    margin-right: 15rem;
+    margin-left: 15rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  main > div.popup > div.content {
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+  }
+  
+  main > div.popup > div.content > a > img {
+    width: 2rem;
+    right: 2.5rem;
+    top: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main > div.popup > div.content {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  
+  main > div.popup > div.content > a > img {
+    right: 1.5rem;
+    top: 1rem;
+  }
+
+  main > div.popup > div.content > a > button {
+    width: calc(100% - 2rem); 
+  }
+}
+
+@media (max-width: 550px) {
+  main > div.popup > div.content > a > img {
+    top: 1rem;
+    right: 1rem;
+    width: 1.5rem;
+  }
+
+  main > div.popup > div.content > h1 {
+    font-size: 2rem;
+  }
+
+  main > div.popup > div.content > div.description > p {
+    font-size: 1rem;
+    text-indent: 2rem;
   }
 }

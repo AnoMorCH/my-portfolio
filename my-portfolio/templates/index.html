@@ -10,10 +10,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>The personal Web site of Anton Morozov</title>
     <link
-    rel="stylesheet"
-    href="{{ url_for('static', filename='style.css') }}"
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
     />
     <script
       src="https://kit.fontawesome.com/d41b91cba2.js"
@@ -22,10 +22,7 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        AnoMorCH <br />
-        portfolio
-      </div>
+      <div class="logo">Portfolio</div>
 
       <ul class="burger-menu">
         <li name="me">Me</li>
@@ -53,14 +50,13 @@
           alt="My Photo"
         />
         <div class="description">
-          <p class="name">Anton Morozov</p>
-          <p class="info">
+          <h1>Anton Morozov</h1>
+          <p>
             Beginner passionate Russian full stack developer who can help you
             realize the project which will show the World your values.
           </p>
-          <p class="info">
-            My target is to deliver to society your idea which 
-            will promote your
+          <p>
+            My target is to deliver to society your idea which will promote your
             business and make your work recognizable.
           </p>
           <div class="contacts">
@@ -70,19 +66,178 @@
             <a href="https://github.com/AnoMorCH" target="_blank">
               <i class="fa fa-brands fa-github"></i>
             </a>
-            <a href="mailto:morozovantonaleksandrovich@gmail.com" target="_blank">
+            <a
+              href="mailto:morozovantonaleksandrovich@gmail.com"
+              target="_blank"
+            >
               <i class="fa fa-solid fa-envelope"></i>
             </a>
           </div>
         </div>
       </section>
+
+      <section class="projects">
+        <h1>Projects</h1>
+        <h2>These are the open projects I am proud about.</h2>
+        <div class="list">
+          <a href="#popup1">
+            <div name="simetra-rating">
+              <div class="image simetra"></div>
+              <div class="description">
+                <div class="header">
+                  <h2>SIMETRA</h2>
+                  <p>Rating of Cities</p>
+                </div>
+                <p>
+                  The rating helps to collect statistics about quality of public
+                  transport in Russian cities.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#popup2">
+            <div name="voting-system">
+              <div class="image poll"></div>
+              <div class="description">
+                <div class="header">
+                  <h2>PET PROJECT</h2>
+                  <p>Voting System</p>
+                </div>
+                <p>
+                  The system is designed to give community a tool to create a
+                  democratic election.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <h2 class="ps-note">
+          Hey... Pss... There are even more projects created by me. However,
+          they are closed due NDA. But I haven't told it you, bro ;).
+        </h2>
+      </section>
+
+      <div class="popup" id="popup1">
+        <div class="content">
+          <a href="#">
+            <img
+              name="close-popup"
+              src="{{ url_for('static', filename='images/xmark-solid.svg') }}"
+              alt="Close Button"
+            />
+          </a>
+          <h1>Rating of Cities</h1>
+          <div class="container">
+            <img
+              src="{{ url_for('static', filename='images/simetra-1.png') }}"
+              alt="Main image"
+            />
+            <div class="images-list">
+              <img
+                class="current"
+                src="{{ url_for('static', filename='images/simetra-1.png') }}"
+                alt="Main page"
+              />
+              <img
+                src="{{ url_for('static', filename='images/simetra-2.png') }}"
+                alt="Data base page"
+              />
+              <img
+                src="{{ url_for('static', filename='images/simetra-3.png') }}"
+                alt="Analytics page"
+              />
+              <img
+                src="{{ url_for('static', filename='images/simetra-4.png') }}"
+                alt="Methodology page"
+              />
+              <img
+                src="{{ url_for('static', filename='images/simetra-5.png') }}"
+                alt="Main page"
+              />
+              <img
+                src="{{ url_for('static', filename='images/simetra-6.png') }}"
+                alt="Detailed statistic page"
+              />
+              <img
+                src="{{ url_for('static', filename='images/simetra-7.png') }}"
+                alt="Map"
+              />
+            </div>
+          </div>
+          <div class="description">
+            <p>
+              A target of the project is collecting data of the scientific
+              research representing a quality of public transport of Russian
+              cities except Moscow and Saint Petersburg.
+            </p>
+            <p>
+              The project was a part of my summer practice at SPBSTU - the
+              university I studied in. I had a role of a project manager and a
+              fullstack developer.
+            </p>
+          </div>
+          <div class="footer">
+            <p>Customer: <span>OOO "A+S Transproekt" (Simetra)</span></p>
+            <p>Date: <span>2022</span></p>
+          </div>
+          <a href="https://opd.strdenis.com/" target="_blank">
+            <button>CHECK IT</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="popup" id="popup2">
+        <div class="content">
+          <a href="#">
+            <img
+              name="close-popup"
+              src="{{ url_for('static', filename='images/xmark-solid.svg') }}"
+              alt="Close Button"
+            />
+          </a>
+          <h1>Voting System</h1>
+          <div class="container">
+            <img
+              src="{{ url_for('static', filename='images/poll-project.png') }}"
+              alt="Main image"
+            />
+            <div class="images-list">
+              <img
+                class="current"
+                src="{{ url_for('static', filename='images/poll-project.png') }}"
+                alt="Main page"
+              />
+            </div>
+          </div>
+          <div class="description">
+            <p>
+              The project was created to help a community to choose their leader
+              using a demorcratic poll system. All users are divided by groups,
+              and they can vote for people and participate in an election.
+            </p>
+            <p>
+              Also there are moderators who can control the whole process. The
+              project was written only by me on Django Web Framework.
+            </p>
+          </div>
+          <div class="footer">
+            <p>Customer: <span>Myself</span></p>
+            <p>Date: <span>2022</span></p>
+          </div>
+          <a
+            href="https://anomorch-poll-project.herokuapp.com/login/?next=/"
+            target="_blank"
+          >
+            <button>CHECK IT</button>
+          </a>
+        </div>
+      </div>
     </main>
 
-    <script 
-      src="{{ url_for('static', filename='scripts/burger.js') }}"
-    ></script>
-    <script
-      src="{{ url_for('static', filename='scripts/navigation.js') }}"
-    ></script>
+    <script src="{{ url_for('static', filename='scripts/burger.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/navigation.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/projects.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/popup.js') }}"></script>
   </body>
 </html>
