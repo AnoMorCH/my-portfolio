@@ -16,6 +16,19 @@ main > section {
   margin-bottom: 3vh;
 }
 
+main > section > h1 {
+  min-height: 10vh;
+  text-align: center;
+  line-height: 10vh;
+  font-size: 3rem;
+}
+
+main > section > div.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 @media (max-width: 550px) or (max-height: 700px) {
   main > section {
     margin-top: 5vh;
@@ -74,6 +87,7 @@ header > ul.burger-menu > li {
 header > ul.burger-menu > li:hover {
   background-color: rgba(255,87,87,255);
   cursor: pointer;
+  color: white;
 }
 
 header > ul.burger-menu > li:active {
@@ -161,7 +175,7 @@ header > ul.burger-menu > img.close-button {
     flex-direction: column;
   }
   
-  header > ul > li {
+  header > ul.burger-menu > li {
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
     color: white;
@@ -303,13 +317,6 @@ main > section.about-me > div.description > div.contacts > a > i:active {
 
 /* 4. Projects */
 /* 4.1. The visible part */
-main > section.projects > h1 {
-  min-height: 10vh;
-  text-align: center;
-  line-height: 10vh;
-  font-size: 3rem;
-}
-
 main > section.projects > h2 {
   font-weight: 100;
   margin-bottom: 3rem;
@@ -319,12 +326,6 @@ main > section.projects > h2 {
 main > section.projects > h2.ps-note {
   margin-bottom: 0;
   margin-top: 3rem;
-}
-
-main > section.projects > div.list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 main > section.projects > div.list > a {
@@ -583,5 +584,84 @@ main > div.popup > div.content > div.container > div.images-list > img.current {
   main > div.popup > div.content > div.description > p {
     font-size: 1rem;
     text-indent: 2rem;
+  }
+}
+
+/* 5. Skills */
+main > section.skills > div.list > div.container {
+  min-width: 25rem;
+  min-height: 25rem;
+  border: 0.15rem solid black;
+  border-radius: 2rem;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+main > section.skills > div.list > div.container > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+main > section.skills > div.list > div.container > div:hover {
+  transform: rotateY(180deg);
+}
+
+main > section.skills > div.list > div.container > div > div.the-front-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  
+  text-align: center;
+  line-height: 25rem;
+  font-size: 3rem;
+  font-weight: 1000;
+}
+
+main > section.skills > div.list > div.container > div > div.the-back-side {
+  position: relative;
+  backface-visibility: hidden;
+  
+  padding: 5%;
+  font-size: 1.25rem;
+  text-align: center;
+
+  top: 50%;
+  transform: rotateY(180deg) translateY(-50%) perspective(1px);
+}
+
+@media (max-width: 450px) {
+  main > section.skills > div.list > div.container {
+    min-width: 20rem;
+    min-height: 20rem;
+  }
+
+  main > section.skills > div.list > div.container > div > div.the-front-side {
+    line-height: 20rem;
+    font-size: 2.5rem;
+  } 
+
+  main > section.skills > div.list > div.container > div > div.the-back-side {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  main > section.skills > div.list > div.container {
+    min-width: 15rem;
+    min-height: 25rem;
+  }
+
+  main > section.skills > div.list > div.container > div > div.the-front-side {
+    line-height: 25rem;
+    font-size: 2rem;
+  } 
+
+  main > section.skills > div.list > div.container > div > div.the-back-side {
+    font-size: 1rem;
   }
 }
