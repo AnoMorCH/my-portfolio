@@ -732,7 +732,7 @@ main > section.recognition > div.list > div > div.description > p {
   justify-content: end;
 }
 
-main > section.recognition > div.list > div > div.description > button {
+main > section.recognition > div.list > div > div.description > a > button {
   background-color: rgb(0, 54, 78);
   color: white;
   font-weight: 1000;
@@ -746,7 +746,7 @@ main > section.recognition > div.list > div > div.description > button {
   margin-bottom: 3rem;
 }
 
-main > section.recognition > div.list > div > div.description > button:active {
+main > section.recognition > div.list > div > div.description > a > button:active {
   transform: scale(0.8);
 }
 
@@ -767,20 +767,20 @@ main > section.recognition > div.list > div > div.description > button:active {
   }
 }
 
-@media (max-width: 1024px) {
-  main > section.recognition > div.list > div > div.description > button {
-    width: 100%;
-    margin-left: 0;
-  }
-}
-
 @media (max-width: 1200px) {
   main > section.recognition > div.list > div > div.description > h2 {
     font-size: 1.5rem;
   }
-
+  
   main > section.recognition > div.list > div > div.description > p {
     font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  main > section.recognition > div.list > div > div.description > button {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
