@@ -698,6 +698,7 @@ main > section.skills > div.list > div.container > div > div.the-back-side {
 /* 6. Recognition */
 main > section.recognition {
   background-color: rgb(241, 236, 222);
+  padding-bottom: 5rem;
 }
 
 main > section.recognition > div.list > div {
@@ -792,6 +793,10 @@ main > section.recognition > div.list > div > div.description > button:active {
 }
 
 @media (max-width: 550px) {
+  main > section.recognition {
+    padding-bottom: 3rem;
+  }
+
   main > section.recognition > div.list > div > img {
     max-width: 20rem;
     max-height: 20rem;
@@ -803,4 +808,15 @@ main > section.recognition > div.list > div > div.description > button:active {
   main > section.recognition > h1 {
     margin-bottom: 1.5rem;
   }
+}
+
+/* 7. Footer */
+footer {
+  padding-left: 15vw;
+  padding-right: 15vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  background-color: rgb(0, 54, 78);
+  color: white;
+  font-weight: 500;
 }
