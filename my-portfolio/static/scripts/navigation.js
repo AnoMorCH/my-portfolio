@@ -25,9 +25,9 @@ function getScrollDestination(event) {
         case 'skills':
             scrollDestination = document.getElementsByClassName('skills')[0];
             break;
-        // case 'recognition':
-        //     scrollDestination = document.getElementsByName('recognition')[0];
-        //     break;
+        case 'recognition':
+            scrollDestination = document.getElementsByClassName('recognition')[0];
+            break;
     }
 
     return scrollDestination;

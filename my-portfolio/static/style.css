@@ -9,11 +9,13 @@
 }
 
 main > section {
-  width: 70vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  border-bottom: 0.1rem black solid;
 }
 
 main > section > h1 {
@@ -48,37 +50,40 @@ main > section > div.list {
 
 @media (max-width: 550px) or (max-height: 700px) {
   main > section {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
   }
 }
 
 @media (max-height: 400px) {
   main > section {
-    margin-top: 7vh;
-    margin-bottom: 7vh;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
   }
 }
 
 @media (max-height: 200px) {
   main > section {
-    margin-top: 9vh;
-    margin-bottom: 9vh;
+    padding-top: 9vh;
+    padding-bottom: 9vh;
   }
 }
 
 /* 2. Header */
 header {
+  background-color: rgb(246, 245, 241);
   font-weight: bolder;
   font-size: 1.5em; 
   min-height: 10vh;
   display: flex;
   justify-content: space-around;
+  border-bottom: solid black 0.1rem;
 }
 
 header > div.logo {
   min-width: 10vw;
   text-align: center;
+  color: rgb(0, 54, 78);
 }
 
 header > ul.burger-menu {
@@ -99,10 +104,11 @@ header > ul.burger-menu > li {
   padding: 0.5em 2em;
   border-radius: 2em;
   transition: all 0.3s ease 0s;
+  color: rgb(0, 54, 78);
 }
 
 header > ul.burger-menu > li:hover {
-  background-color: rgba(255,87,87,255);
+  background-color: rgb(0, 54, 78);
   cursor: pointer;
   color: white;
 }
@@ -122,7 +128,7 @@ header > div.burger > div {
   display: none; 
   width: 25px;
   height: 5px;
-  background-color: black;
+  background-color: rgb(0, 54, 78);
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -147,6 +153,7 @@ header > ul.burger-menu > img.close-button {
 @media (max-width: 1440px) {
   header {
     justify-content: end;
+    border: none;
   }
 
   header > div.logo {
@@ -187,7 +194,7 @@ header > ul.burger-menu > img.close-button {
     width: 100vw;
     position: fixed;
     justify-content: center;
-    background: rgba(255,87,87,255);
+    background: rgb(0, 54, 78);
     transition: top 1s ease 0s;
     flex-direction: column;
   }
@@ -208,6 +215,7 @@ header > ul.burger-menu > img.close-button {
 /* 3. About Me */
 main > section.about-me {
   display: flex;
+  background-color: rgb(246, 245, 241);
 }
 
 main > section.about-me > * {
@@ -219,6 +227,7 @@ main > section.about-me > img {
   width: 30vw;
   height: 30vw;
   border-radius: 50%;
+  border: 0.1rem solid black;
 }
 
 main > section.about-me > div.description {
@@ -251,7 +260,7 @@ main > section.about-me > div.description > div.contacts > a > i {
 }
 
 main > section.about-me > div.description > div.contacts > a > i:hover {
-  color: rgba(255,87,87,255);
+  color: rgb(0, 54, 78);
   cursor: pointer;
 }
 
@@ -262,7 +271,8 @@ main > section.about-me > div.description > div.contacts > a > i:active {
 
 @media (max-width: 1440px) {
   main > section.about-me {
-    width: 75vw;
+    padding-left: 12.5vw;
+    padding-right: 12.5vw;
   }
 
   main > section.about-me > div.description > h1 {
@@ -276,7 +286,8 @@ main > section.about-me > div.description > div.contacts > a > i:active {
 
 @media (max-width: 1220px) {
   main > section.about-me {
-    width: 80vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }
 
@@ -299,7 +310,8 @@ main > section.about-me > div.description > div.contacts > a > i:active {
 
 @media (max-width: 768px) {
   main > section.about-me {
-    width: 85vw;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
   }
 
   main > section.about-me > img {
@@ -319,7 +331,8 @@ main > section.about-me > div.description > div.contacts > a > i:active {
 
 @media (max-width: 425px) {
   main > section.about-me {
-    width: 90vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 
   main > section.about-me > img {
@@ -334,6 +347,10 @@ main > section.about-me > div.description > div.contacts > a > i:active {
 
 /* 4. Projects */
 /* 4.1. The visible part */
+main > section.projects {
+  background-color: rgb(246, 236, 233);
+}
+
 main > section.projects > h2.ps-note {
   margin-bottom: 0;
   margin-top: 3rem;
@@ -373,6 +390,7 @@ main > section.projects > div.list > a > div > div.description {
   border-radius: 0 0 2rem 2rem;
   padding: 1rem 1.5rem;
   text-align: center;
+  background-color: white;
 }
 
 main > section.projects > div.list > a > div > div.simetra {
@@ -405,7 +423,8 @@ main > section.projects > div.list > a > div > div.description > p {
 
 @media (max-width: 550px) {
   main > section.projects {
-    width: 85vw;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
   }
 
   main > section.projects > h1 {
@@ -447,7 +466,7 @@ main > div.popup {
   right: 0;
   z-index: 99;
 
-  background-color: #FFF;
+  background-color: rgb(241, 236, 222);
   overflow-y: scroll;
 }
 
@@ -491,7 +510,7 @@ main > div.popup > div.content > div.footer > p {
 
 main > div.popup > div.content > div.footer > p > span {
   font-weight: bold;
-  color: rgba(255,87,87,255);
+  color: rgb(0, 54, 78);
 }
 
 main > div.popup > div.content > div.container {
@@ -500,7 +519,7 @@ main > div.popup > div.content > div.container {
 }
 
 main > div.popup > div.content > a > button {
-  background-color: rgba(255,87,87,255);
+  background-color: rgb(0, 54, 78);
   color: white;
   font-weight: 1000;
   font-size: 1.5rem;
@@ -536,7 +555,7 @@ main > div.popup > div.content > div.container > div.images-list > img {
 }
 
 main > div.popup > div.content > div.container > div.images-list > img.current {
-  border: rgba(255,87,87,255) solid 0.2rem;
+  border: rgb(0, 54, 78) solid 0.2rem;
 }
 
 @media (max-width: 1440px) {
@@ -593,10 +612,15 @@ main > div.popup > div.content > div.container > div.images-list > img.current {
 }
 
 /* 5. Skills */
+main > section.skills {
+  background-color: #FFFFFF;
+}
+
 main > section.skills > div.list > div.container {
   min-width: 25rem;
   min-height: 25rem;
   border: 0.15rem solid black;
+  background-color: rgb(241, 236, 222);
   border-radius: 2rem;
   position: relative;
   margin-top: 1rem;
@@ -672,6 +696,10 @@ main > section.skills > div.list > div.container > div > div.the-back-side {
 }
 
 /* 6. Recognition */
+main > section.recognition {
+  background-color: rgb(241, 236, 222);
+}
+
 main > section.recognition > div.list > div {
   display: flex; 
 }
@@ -703,6 +731,24 @@ main > section.recognition > div.list > div > div.description > p {
   justify-content: end;
 }
 
+main > section.recognition > div.list > div > div.description > button {
+  background-color: rgb(0, 54, 78);
+  color: white;
+  font-weight: 1000;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 3rem;
+}
+
+main > section.recognition > div.list > div > div.description > button:active {
+  transform: scale(0.8);
+}
+
 @media (max-width: 1440px) {
   main > section.recognition > div.list > div {
     display: block; 
@@ -717,6 +763,13 @@ main > section.recognition > div.list > div > div.description > p {
 
   main > section.recognition > div.list > div > div.description > h2 {
     text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  main > section.recognition > div.list > div > div.description > button {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
