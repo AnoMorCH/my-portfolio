@@ -4,6 +4,9 @@ const languagesLink = languages.querySelectorAll('a');
 
 const data = {
     'english': {
+        'head': {
+            'title': 'The personal Web site of Anton Morozov'
+        },
         'header': {
             'logo': 'Portfolio',
             'me': 'Me',
@@ -114,6 +117,9 @@ const data = {
         }
     },
     'russian': {
+        'head': {
+            'title': 'Личный веб-сайт Антона Морозова'
+        },
         'header': {
             'logo': 'Портфолио',
             'me': 'Обо мне',
@@ -218,7 +224,7 @@ const data = {
                 'В ходе взаимодействия Антон был открыт к новым идеям, ' +
                 'проявил такие качества, как креативность, трудолюбие ' +
                 'и коммуникабельность.',
-            'descriptionSignature': '- Андрей Прохоров, технический <br />' +
+            'descriptionSignature': '- Андрей Прохоров, <br /> технический' +
                 'директор ООО "А+С Транспроект"',
             'button': 'Отзыв'
         },
@@ -232,14 +238,19 @@ const data = {
 function changeCurrentLanguage(newLanguage) {
     const currentClassName = 'current';
     const oldLanguage = languages.getElementsByClassName(currentClassName)[0];
-
+    
     oldLanguage.classList.remove(currentClassName);
     newLanguage.classList.add(currentClassName);
 }
 
+function changeTitle(currentLanguage) {
+    const title = document.querySelector('title');
+    title.textContent = data[currentLanguage]['head']['title'];
+}
+
 function changeNavbarLanguage(currentLanguage) {
     const logo = header.getElementsByClassName('logo')[0];
-
+    
     const burger = header.getElementsByClassName('burger-menu')[0];
     const me = burger.querySelector('#me');
     const projects = burger.querySelector('#projects');
@@ -412,6 +423,7 @@ languagesLink.forEach(newCurrentLanaguge => {
     newCurrentLanaguge.addEventListener('click', () => {
         changeCurrentLanguage(newCurrentLanaguge);
         const currentLanguage = newCurrentLanaguge.getAttribute('language');
+        changeTitle(currentLanguage);
         changeNavbarLanguage(currentLanguage);
         changeAboutMeLanguage(currentLanguage);
         changeProjectsLanguage(currentLanguage);
