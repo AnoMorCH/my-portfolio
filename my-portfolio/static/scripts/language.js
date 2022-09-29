@@ -92,6 +92,21 @@ const data = {
                 'writing all which is connected with code only in the ' + 
                 'language. As a person, I am friendly, hardworking and ' +
                 'dedicated. So, a good cooperation awaits us!'
+        },
+        'recognition': {
+            'header': 'Recognition',
+            'subHeader': "In spite of being young, I have some feedback " +
+                "from people I've worked with!",
+            'descriptionHeader': 'Anton has shown himself as an intiative, ' +
+                'reliable and diligent worker',
+            'descriptionP': '"In a process of work Anton has showed ' +
+                'himself as an initiative, reliable and diligent worker ' +
+                'who is ready to do anything to finish successfully all ' +
+                'required tasks. He is open-minded, creative, hardworking ' +
+                'and commucative."',
+            'descriptionSignature': '- Andrey Prokhorov, <br />technical ' +
+                'director of LLC "A+S Transproject"',
+            'button': 'Testimonial' 
         }
     },
     'russian': {
@@ -100,7 +115,7 @@ const data = {
             'me': 'Обо мне',
             'projects': 'Проекты',
             'skills': 'Навыки',
-            'recognition': 'Признание',
+            'recognition': 'Отзывы',
             'english': 'Англ',
             'russian': 'Рус'
         },
@@ -185,6 +200,23 @@ const data = {
                 'связано с кодом, на этом языке. Как человек, я ' +
                 'дружелюбный, трудолюбивый и целеустремленный. Поэтому ' +
                 'отличное сотрудничество ждет нас!'
+        },
+        'recognition': {
+            'header': 'Отзывы',
+            'subHeader': 'Несмотря на юный возраст, я имею обратную связь ' +
+                'от людей, с которыми я работал.',
+            'descriptionHeader': 'Антон Александрович проявил себя как ' +
+                'инициативный, ответственный и исполнительный сотрудник',
+            'descriptionP': 'В процессе работы Антон Александрович проявил ' +
+                'себя как инициативный, ответственный и исполнительный ' +
+                'сотрудник, который готов сделать всё возможное для ' +
+                'успешного завершения задач в срок и в требуемом качестве. ' +
+                'В ходе взаимодействия Антон был открыт к новым идеям, ' +
+                'проявил такие качества, как креативность, трудолюбие ' +
+                'и коммуникабельность.',
+            'descriptionSignature': '- Андрей Прохоров, технический <br />' +
+                'директор ООО "А+С Транспроект"',
+            'button': 'Отзыв'
         }
     }
 }
@@ -331,6 +363,33 @@ function changeSkillsLanguage(currentLanguage) {
     backOther.textContent = data[currentLanguage]['skills']['backOther'];
 }
 
+function changeRecognitionLanguage(currentLanguage) {
+    const recognition = document.getElementsByClassName('recognition')[0];
+
+    const header = recognition.querySelector('h1');
+    const subHeader = recognition.querySelector('h2');
+
+    const description = recognition.getElementsByClassName('description')[0];
+    const descriptionHeader = description.querySelector('h2');
+    const descriptionP = description.querySelector('p');
+    const descriptionSignature = 
+        description.getElementsByClassName('signature')[0];
+
+    const button = recognition.querySelector('button');
+
+    header.textContent = data[currentLanguage]['recognition']['header'];
+    subHeader.textContent = data[currentLanguage]['recognition']['subHeader'];
+    
+    descriptionHeader.textContent = 
+        data[currentLanguage]['recognition']['descriptionHeader'];
+    descriptionP.textContent = 
+        data[currentLanguage]['recognition']['descriptionP'];
+    descriptionSignature.innerHTML = 
+        data[currentLanguage]['recognition']['descriptionSignature'];
+
+    button.textContent = data[currentLanguage]['recognition']['button'];
+}
+
 languagesLink.forEach(newCurrentLanaguge => {
     newCurrentLanaguge.addEventListener('click', () => {
         changeCurrentLanguage(newCurrentLanaguge);
@@ -340,5 +399,6 @@ languagesLink.forEach(newCurrentLanaguge => {
         changeProjectsLanguage(currentLanguage);
         changePopupLanguage(currentLanguage);
         changeSkillsLanguage(currentLanguage);
+        changeRecognitionLanguage(currentLanguage);
     });
 });
