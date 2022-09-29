@@ -113,6 +113,8 @@ header > * {
 header > ul.burger-menu > li {
   margin-left: auto;
   margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   display: inline-block;
   text-align: center;
   padding: 0.5em 2em;
