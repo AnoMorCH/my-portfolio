@@ -25,16 +25,22 @@
       <div class="logo">Portfolio</div>
 
       <ul class="burger-menu">
-        <li name="me">Me</li>
-        <li name="projects">Projects</li>
-        <li name="skills">Skills</li>
-        <li name="recognition">Recognition</li>
+        <li id="me">Me</li>
+        <li id="projects">Projects</li>
+        <li id="skills">Skills</li>
+        <li id="recognition">Recognition</li>
         <img
           class="close-button"
           src="{{ url_for('static', filename='images/close-button.png') }}"
           alt="Close button"
         />
       </ul>
+
+      <div class="languages">
+        <a href="#" language="english" class="current">En</a>
+        /
+        <a href="#" language="russian">Ru</a>
+      </div>
 
       <div class="burger">
         <div></div>
@@ -52,7 +58,7 @@
         <div class="description">
           <h1>Anton Morozov</h1>
           <p>
-            Beginner passionate Russian full stack developer who can help you
+            Beginner passionate Russian full-stack developer who can help you
             realize the project which will show the World your values.
           </p>
           <p>
@@ -283,11 +289,11 @@
               <div class="the-front-side">OTHER</div>
               <div class="the-back-side">
                 I have a lot of other qualities which are helpful in IT. I have
-                a nice experience with Docker, AWS, Robocassa, Heroku and a lot
-                of other stuff. Also I am a confident English speaker and prefer
-                writing all which is connected with code only in the language.
-                As a person, I am friendly, hardworking and dedicated. So, a
-                good cooperation awaits us!
+                a nice experience with Docker, AWS, Robocassa, Heroku, git
+                system, Linux and a lot of other stuff. Also I am a confident
+                English speaker and prefer writing all which is connected with
+                code only in the language. As a person, I am friendly,
+                hardworking and dedicated. So, a good cooperation awaits us!
               </div>
             </div>
           </div>
@@ -302,34 +308,47 @@
         </h2>
         <div class="list">
           <div name="simetra">
-            <img 
-              src="{{ url_for('static', filename='images/andrey.jpg') }}" 
+            <img
+              src="{{ url_for('static', filename='images/andrey.jpg') }}"
               alt="Andrey's photo"
             />
             <div class="description">
               <h2>
-                Anton has shown himself as an intiative, reliable and 
-                diligent worker
+                Anton has shown himself as an intiative, reliable and diligent
+                worker
               </h2>
               <p>
                 "In a process of work Anton has showed himself as an initiative,
                 reliable and diligent worker who is ready to do anything to
-                finish successfully all required tasks. He was open-minded,
+                finish successfully all required tasks. He is open-minded,
                 creative, hardworking and commucative."
               </p>
               <p class="signature">
-                - Andrey Prokhorov, <br/>
+                - Andrey Prokhorov, <br />
                 technical director of LLC "A+S Transproject"
               </p>
+              <a
+                target="_blank"
+                href="https://drive.google.com/drive/folders/1ef8b85hjNHCXWGifNrOm9Q_h9HnQTbH-?usp=sharing"
+              >
+                <button>Testimonial</button>
+              </a>
             </div>
           </div>
         </div>
       </section>
     </main>
 
+    <footer>
+      <p>@2022 Anton Morozov</p>
+      <p>Saint Petersburg, the Russian Federation</p>
+      <p>+7 (931) 579-42-40</p>
+    </footer>
+
     <script src="{{ url_for('static', filename='scripts/burger.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/navigation.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/projects.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/popup.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/language.js') }}"></script>
   </body>
 </html>
