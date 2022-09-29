@@ -107,6 +107,10 @@ const data = {
             'descriptionSignature': '- Andrey Prokhorov, <br />technical ' +
                 'director of LLC "A+S Transproject"',
             'button': 'Testimonial' 
+        },
+        'footer': {
+            'dateAndName': '@2022 Anton Morozov',
+            'address': 'Saint Petersburg, the Russian Federation'
         }
     },
     'russian': {
@@ -217,6 +221,10 @@ const data = {
             'descriptionSignature': '- Андрей Прохоров, технический <br />' +
                 'директор ООО "А+С Транспроект"',
             'button': 'Отзыв'
+        },
+        'footer': {
+            'dateAndName': '@2022 Антон Морозов',
+            'address': 'Российская Федерация, г. Санкт-Петербург'
         }
     }
 }
@@ -390,6 +398,16 @@ function changeRecognitionLanguage(currentLanguage) {
     button.textContent = data[currentLanguage]['recognition']['button'];
 }
 
+function changeFooterLanguage(currentLanguage) {
+    const footer = document.querySelector('footer');
+
+    const dateAndName = footer.querySelectorAll('p')[0];
+    const address = footer.querySelectorAll('p')[1];
+
+    dateAndName.textContent = data[currentLanguage]['footer']['dateAndName'];
+    address.textContent = data[currentLanguage]['footer']['address'];
+}
+
 languagesLink.forEach(newCurrentLanaguge => {
     newCurrentLanaguge.addEventListener('click', () => {
         changeCurrentLanguage(newCurrentLanaguge);
@@ -400,5 +418,6 @@ languagesLink.forEach(newCurrentLanaguge => {
         changePopupLanguage(currentLanguage);
         changeSkillsLanguage(currentLanguage);
         changeRecognitionLanguage(currentLanguage);
+        changeFooterLanguage(currentLanguage);
     });
 });
