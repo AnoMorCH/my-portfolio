@@ -48,6 +48,50 @@ const data = {
                 '(Simetra)</span>',
             'footerP2': 'Date: <span>2022</span>',
             'button': 'CHECK IT'
+        },
+        'popup2': {
+            'header': 'Voting System',
+            'descriptionP1': 'The project was created to help a community ' +
+                'to choose their leader using a demorcratic poll system. ' +
+                'All users are divided by groups, and they can vote for ' +
+                'people and participate in an election.',
+            'descriptionP2': 'Also there are moderators who can control ' +
+                'the whole process. The project was written only by ' +
+                'me on Django Web Framework.',
+            'footerP1': 'Customer: <span>Myself</span>',
+            'footerP2': 'Date: <span>2022</span>',
+            'button': 'CHECK IT'
+        },
+        'skills': {
+            'header': 'Навыки',
+            'backPython': 'I have a back-end background. I have worked ' +
+                'with Django and Flask. I am pretty confident with all ' +
+                'simple components of back-end development like creating ' +
+                'an authorization system, changing the content of a ' + 
+                'database by frontend activity, payments system etc. Also ' + 
+                'I am ready to learn any new framework which you believe ' + 
+                'is suitable for your project.',
+            'backFrontend': 'I am good with these guys too. However, ' + 
+                'for me, the front-end is just like a hobby which helps ' + 
+                'me relax after hard back-end work. In spite of that, I ' + 
+                'can do a lot of tasks which many front-end programmers ' + 
+                'do like building a layout, creating vanilla animations, ' + 
+                'writing styles for a project and a lot of other things. ' +
+                'Also, I am nice with adaptice layout.',
+            'frontTesting': 'TESTING',
+            'backTesting': 'I believe today everything which is written ' +
+                'in the back-end should be tested thoroughly. So, I cover ' +
+                'every project with tests by 100 percent. Sometimes I ' +
+                'write them too much but I think being a testing freak is ' + 
+                'better than not writing tests at all.',
+            'frontOther': 'OTHER',
+            'backOther': 'I have a lot of other qualities which are helpful ' +
+                'in IT. I have a nice experience with Docker, AWS, ' +
+                'Robocassa, Heroku, git system, Linux and a lot of other ' +
+                'stuff. Also I am a confident English speaker and prefer ' + 
+                'writing all which is connected with code only in the ' + 
+                'language. As a person, I am friendly, hardworking and ' +
+                'dedicated. So, a good cooperation awaits us!'
         }
     },
     'russian': {
@@ -99,17 +143,48 @@ const data = {
         },
         'popup2': {
             'header': 'Избирательная Система',
-            'descriptionP1': 'Данный проект был создан, чтобы помочь ' + 
-                'сообществу выбрать их лидера, используя систему ' + 
-                'демократического голосования. Все пользователи разделены ' + 
-                'на группы, и они могут голосвать за других людей и ' + 
+            'descriptionP1': 'Данный проект был создан, чтобы помочь ' +
+                'сообществу выбрать их лидера, используя систему ' +
+                'демократического голосования. Все пользователи разделены ' +
+                'на группы, и они могут голосвать за других людей и ' +
                 'принимать участие в выборах.',
-            'descriptionP2': 'Также есть администраторы, которые могуг ' + 
-                'контролировать весь процесс. Данный проект был написан ' + 
+            'descriptionP2': 'Также есть администраторы, которые могуг ' +
+                'контролировать весь процесс. Данный проект был написан ' +
                 'мной полностью при использовании Django Web Framework.',
             'footerP1': 'Заказчик: <span>Я</span>',
             'footerP2': 'Дата: <span>2022</span>',
             'button': 'ПРОВЕРИТЬ'
+        },
+        'skills': {
+            'header': 'Навыки',
+            'backPython': 'Я начал свой путь с бекенд и работал с Django ' +
+                'и Flask. Я могу веренно работать со всеми простыми ' +
+                'компонентами бекенда как система авторизации, изменение ' +
+                'контента в базе данных на основе фронтенд активности, ' + 
+                'платежные системы и т.д. Также я готов выучить любой ' + 
+                'новый фреймворк, который, по вашему мнению, подходит ' +
+                'вашему проекту.',
+            'backFrontend': 'Я также уверен и с этими технологиями. Однако ' +
+                'для меня фронтенд - это просто хобби, которое помогает ' +
+                'мне расслабиться после тяжелой бекенд работы. Несмотря на ' +
+                'это, я могу выполнить большое количество задач, которые ' +
+                'делают фронтенд программисты, как создание верстки, ' +
+                'реализация ванильных анимаций, написание CSS стилей и ' +
+                'много другое. Также я умею писать адаптивную верстку.',
+            'frontTesting': 'ТЕСТИРОВКА',
+            'backTesting': 'Я верю: сегодня всё, что написано в бекенде, ' +
+                'должно быть полностью протестировано. Поэтому я покрываю ' +
+                'каждый проект тестами на 100 процентов. Иногда я пишу их ' +
+                'слишком много, но я думаю, что лучше быть ' +
+                'маньяком-тестировщиком, чем не писать тесты вообще.',
+            'frontOther': 'ДРУГОЕ',
+            'backOther': 'Я имею много качеств, полезных для IT индустрии. ' +
+                'У меня есть опыт работы с Докером, AWS, Робокассой, ' +
+                'Хероку, гит-системой, Линуксом и многим другим. Также я ' +
+                'уверенно владею английским и предпочитаю писать всё, что ' +
+                'связано с кодом, на этом языке. Как человек, я ' +
+                'дружелюбный, трудолюбивый и целеустремленный. Поэтому ' +
+                'отличное сотрудничество ждет нас!'
         }
     }
 }
@@ -184,8 +259,10 @@ function changeProjectsLanguage(currentLanguage) {
     simetraP1.textContent = data[currentLanguage]['projects']['simetraP1'];
     simetraP2.textContent = data[currentLanguage]['projects']['simetraP2'];
 
-    votingSystemP1.textContent = data[currentLanguage]['projects']['votingSystemP1'];
-    votingSystemP2.textContent = data[currentLanguage]['projects']['votingSystemP2'];
+    votingSystemP1.textContent =
+        data[currentLanguage]['projects']['votingSystemP1'];
+    votingSystemP2.textContent =
+        data[currentLanguage]['projects']['votingSystemP2'];
 
     subPSHeader.textContent = data[currentLanguage]['projects']['subPSHeader'];
 }
@@ -222,6 +299,38 @@ function changePopupLanguage(currentLanguage) {
     });
 }
 
+function changeSkillsLanguage(currentLanguage) {
+    const skills = document.getElementsByClassName('skills')[0];
+
+    const header = skills.querySelector('h1');
+
+    const python = skills.querySelector("div[name='python']");
+    const backPython = python.getElementsByClassName('the-back-side')[0];
+
+    const frontend = skills.querySelector("div[name='frontend']");
+    const backFrontend = frontend.getElementsByClassName('the-back-side')[0];
+
+    const testing = skills.querySelector("div[name='testing']");
+    const frontTesting = testing.getElementsByClassName('the-front-side')[0];
+    const backTesting = testing.getElementsByClassName('the-back-side')[0];
+
+    const other = skills.querySelector("div[name='other']");
+    const frontOther = other.getElementsByClassName('the-front-side')[0];
+    const backOther = other.getElementsByClassName('the-back-side')[0];
+
+    header.textContent = data[currentLanguage]['skills']['header'];
+
+    backPython.textContent = data[currentLanguage]['skills']['backPython'];
+
+    backFrontend.textContent = data[currentLanguage]['skills']['backFrontend'];
+
+    frontTesting.textContent = data[currentLanguage]['skills']['frontTesting'];
+    backTesting.textContent = data[currentLanguage]['skills']['backTesting'];
+
+    frontOther.textContent = data[currentLanguage]['skills']['frontOther'];
+    backOther.textContent = data[currentLanguage]['skills']['backOther'];
+}
+
 languagesLink.forEach(newCurrentLanaguge => {
     newCurrentLanaguge.addEventListener('click', () => {
         changeCurrentLanguage(newCurrentLanaguge);
@@ -230,5 +339,6 @@ languagesLink.forEach(newCurrentLanaguge => {
         changeAboutMeLanguage(currentLanguage);
         changeProjectsLanguage(currentLanguage);
         changePopupLanguage(currentLanguage);
+        changeSkillsLanguage(currentLanguage);
     });
 });
