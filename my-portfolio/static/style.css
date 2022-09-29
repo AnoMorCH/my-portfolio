@@ -86,6 +86,20 @@ header > div.logo {
   color: rgb(0, 54, 78);
 }
 
+header > div.languages {
+  color: rgb(0, 54, 78);
+}
+
+header > div.languages > a {
+  text-decoration: none;
+  color: rgb(0, 54, 78);
+  cursor: pointer;
+}
+
+header > div.languages > a.current {
+  text-decoration: underline;
+}
+
 header > ul.burger-menu {
   width: 50%;
   display: flex;
@@ -152,12 +166,16 @@ header > ul.burger-menu > img.close-button {
 
 @media (max-width: 1440px) {
   header {
-    justify-content: end;
+    justify-content: space-between;
     border: none;
   }
 
   header > div.logo {
     display: none;
+  }
+  
+  header > div.languages {
+    margin-left: 5vw;
   }
 
   header > div.burger {

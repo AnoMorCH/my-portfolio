@@ -11,7 +11,7 @@ navButtons.addEventListener('click', function(event) {
 
 function getScrollDestination(event) {
     const clickedButtonElement = event.target;
-    const clickedButtonName = clickedButtonElement.getAttribute('name');
+    const clickedButtonName = clickedButtonElement.getAttribute('id');
 
     let scrollDestination = null;
 

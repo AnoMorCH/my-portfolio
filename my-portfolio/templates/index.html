@@ -25,16 +25,22 @@
       <div class="logo">Portfolio</div>
 
       <ul class="burger-menu">
-        <li name="me">Me</li>
-        <li name="projects">Projects</li>
-        <li name="skills">Skills</li>
-        <li name="recognition">Recognition</li>
+        <li id="me">Me</li>
+        <li id="projects">Projects</li>
+        <li id="skills">Skills</li>
+        <li id="recognition">Recognition</li>
         <img
           class="close-button"
           src="{{ url_for('static', filename='images/close-button.png') }}"
           alt="Close button"
         />
       </ul>
+
+      <div class="languages">
+        <a href="#" language="english" class="current">En</a>
+        /
+        <a href="#" language="russian">Ru</a>
+      </div>
 
       <div class="burger">
         <div></div>
@@ -343,5 +349,6 @@
     <script src="{{ url_for('static', filename='scripts/navigation.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/projects.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/popup.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/language.js') }}"></script>
   </body>
 </html>
