@@ -419,17 +419,21 @@ function changeFooterLanguage(currentLanguage) {
     address.textContent = data[currentLanguage]['footer']['address'];
 }
 
+function changeMarkupLanguge(currentLanguage) {
+    changeTitle(currentLanguage);
+    changeNavbarLanguage(currentLanguage);
+    changeAboutMeLanguage(currentLanguage);
+    changeProjectsLanguage(currentLanguage);
+    changePopupLanguage(currentLanguage);
+    changeSkillsLanguage(currentLanguage);
+    changeRecognitionLanguage(currentLanguage);
+    changeFooterLanguage(currentLanguage);
+}
+
 languagesLink.forEach(newCurrentLanaguge => {
     newCurrentLanaguge.addEventListener('click', () => {
         changeCurrentLanguage(newCurrentLanaguge);
         const currentLanguage = newCurrentLanaguge.getAttribute('language');
-        changeTitle(currentLanguage);
-        changeNavbarLanguage(currentLanguage);
-        changeAboutMeLanguage(currentLanguage);
-        changeProjectsLanguage(currentLanguage);
-        changePopupLanguage(currentLanguage);
-        changeSkillsLanguage(currentLanguage);
-        changeRecognitionLanguage(currentLanguage);
-        changeFooterLanguage(currentLanguage);
+        changeMarkupLanguge(currentLanguage);
     });
 });
