@@ -14,5 +14,5 @@ function showBurgerMenu() {
 }
 
 function closeBurgerMenu() {
-    menu.style.top = '-100%';
+    menu.style.top = '-200%';
 }
